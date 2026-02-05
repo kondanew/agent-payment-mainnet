@@ -1,0 +1,116 @@
+{
+  "name": "Agent Payment Service",
+  "description": "Real USDC payment API for AI agents on Base mainnet",
+  "version": "1.0.0",
+  "schemaVersion": "2024-01",
+  
+  "type": "payment-gateway",
+  "category": "api-service",
+  
+  "contact": {
+    "author": "OpenClaw Agent",
+    "email": "agent.payment@openclaw.local",
+    "url": "https://github.com/kondanew/agent-payment-mainnet"
+  },
+  
+  "network": {
+    "name": "Base",
+    "chainId": 8453,
+    "currency": "USDC",
+    "isMainnet": true,
+    "explorer": "https://basescan.org"
+  },
+  
+  "payment": {
+    "type": "static",
+    "currency": "USDC",
+    "receiver": "0xf90323646eF20d988ca4cD4b664bC6a0F6E63c11",
+    "contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "confirmations": 1
+  },
+  
+  "services": [
+    {
+      "id": "weather",
+      "name": "Weather API",
+      "description": "Real-time weather data",
+      "price": 0.001,
+      "endpoint": "GET https://penetration-organize-glance-scientists.trycloudflare.com/api/weather",
+      "headers": {
+        "X-Payment-Tx": "string"
+      }
+    },
+    {
+      "id": "crypto",
+      "name": "Crypto Prices",
+      "description": "Cryptocurrency price data",
+      "price": 0.005,
+      "endpoint": "GET https://penetration-organize-glance-scientists.trycloudflare.com/api/crypto",
+      "headers": {
+        "X-Payment-Tx": "string"
+      }
+    },
+    {
+      "id": "news",
+      "name": "News API",
+      "description": "Latest news headlines",
+      "price": 0.002,
+      "endpoint": "GET https://penetration-organize-glance-scientists.trycloudflare.com/api/news",
+      "headers": {
+        "X-Payment-Tx": "string"
+      }
+    },
+    {
+      "id": "geo",
+      "name": "Geocoding API",
+      "description": "Address to coordinates",
+      "price": 0.003,
+      "endpoint": "GET https://penetration-organize-glance-scientists.trycloudflare.com/api/geo",
+      "headers": {
+        "X-Payment-Tx": "string"
+      }
+    },
+    {
+      "id": "premium",
+      "name": "Premium Access",
+      "description": "Full API access",
+      "price": 0.01,
+      "endpoint": "GET https://penetration-organize-glance-scientists.trycloudflare.com/api/premium",
+      "headers": {
+        "X-Payment-Tx": "string"
+      }
+    }
+  ],
+  
+  "endpoints": {
+    "base": "https://penetration-organize-glance-scientists.trycloudflare.com",
+    "health": "/health",
+    "info": "/api/info",
+    "verify": "/api/verify",
+    "balance": "/api/balance"
+  },
+  
+  "authentication": {
+    "type": "none",
+    "description": "Payment verified via X-Payment-Tx header"
+  },
+  
+  "features": [
+    "real-usdc-payments",
+    "base-mainnet",
+    "instant-verification",
+    "no-kyc"
+  ],
+  
+  "tags": [
+    "ai-agent",
+    "payments",
+    "usdc",
+    "base",
+    "api",
+    "web3"
+  ],
+  
+  "created": "2026-02-05T00:00:00Z",
+  "updated": "2026-02-05T10:00:00Z"
+}
