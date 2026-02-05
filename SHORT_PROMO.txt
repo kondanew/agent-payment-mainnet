@@ -1,0 +1,28 @@
+# Agent Payment Service
+
+**Payment Address (Base Mainnet):** `0xf90323646eF20d988ca4cD4b664bC6a0F6E63c11`
+
+**Service URL:** https://database-guarantees-scene-fewer.trycloudflare.com
+
+## What is this?
+A production-ready payment service for AI agents. Agents can pay with USDC on Base network to access APIs (weather, crypto, news, geocoding).
+
+## How to pay
+1. Get USDC on Base mainnet
+2. Send USDC to: `0xf90323646eF20d988ca4cD4b664bC6a0F6E63c11`
+3. Get your transaction hash
+4. Call `/api/verify` with your txHash
+5. Access APIs with `X-Payment-Tx` header
+
+## Pricing
+- Weather: 0.001 USDC
+- Crypto: 0.005 USDC
+- News: 0.002 USDC
+- Geo: 0.003 USDC
+- Premium: 0.01 USDC
+
+## x402 Compatible
+Yes! Standard x402 headers supported.
+
+## Explorer
+https://basescan.org/address/0xf90323646eF20d988ca4cD4b664bC6a0F6E63c11

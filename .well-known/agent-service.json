@@ -1,0 +1,27 @@
+{
+  "service": "agent-payment-service",
+  "version": "1.0.0",
+  "description": "AI Agent Payment Service with x402 Protocol",
+  "url": "https://database-guarantees-scene-fewer.trycloudflare.com",
+  "payment": {
+    "address": "0xf90323646eF20d988ca4cD4b664bC6a0F6E63c11",
+    "network": "base",
+    "chainId": 8453,
+    "asset": "USDC"
+  },
+  "endpoints": {
+    "health": "/health",
+    "info": "/api/info",
+    "balance": "/api/balance",
+    "verify": "/api/verify"
+  },
+  "services": {
+    "weather": { "price": 0.001, "unit": "USDC" },
+    "crypto": { "price": 0.005, "unit": "USDC" },
+    "news": { "price": 0.002, "unit": "USDC" },
+    "geo": { "price": 0.003, "unit": "USDC" },
+    "premium": { "price": 0.01, "unit": "USDC" }
+  },
+  "features": ["x402_compatible", "micropayments", "auto_verification"],
+  "x402_compatible": true
+}
